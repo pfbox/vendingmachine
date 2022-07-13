@@ -87,14 +87,13 @@ class VendingMachine:
 
     def refund(self):
         ref = self.calc_refund()
-        if ref:
-            for k, v in ref.items():
-                self.change[k] -= v
-                self.collected[k] -= v
-            total_refund = sum([k*v for k, v in ref.items()])
-            self.credit = self.credit - total_refund
-            print(f"Refunded {ref}, total refund {total_refund}")
-            print(f"Current credit {self.credit}")
+        for k, v in ref.items():
+            self.change[k] -= v
+            self.collected[k] -= v
+        total_refund = sum([k*v for k, v in ref.items()])
+        self.credit = self.credit - total_refund
+        print(f"Refunded {ref}, total refund {total_refund}")
+        print(f"Current credit {self.credit}")
 
     def run(self):
         self.healthcheck()
@@ -117,7 +116,7 @@ class VendingMachine:
                     try:
                         self.pay(int(cmd[1]))
                     except ValueError:
-                        print ('Wrong input')
+                        print('Wrong input')
                 elif cmd[0] == 'item':
                     item = self.find_item(cmd[1])
                     if item:
