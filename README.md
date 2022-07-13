@@ -1,5 +1,15 @@
 # Vending Machine app
 
+## Install python
+
+https://www.python.org/downloads/
+
+## Clone the project from GitHub
+
+```
+git clone https://github.com/pfbox/vendingmachine.git
+```
+
 ## Run app
 
 ```
@@ -7,7 +17,7 @@ python main.py
 ```
 
 ## Available commands
-
+This app is using prompt input to operate 
 ```
 healthcheck - show vending machine info
 menu - show menu
