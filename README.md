@@ -1,8 +1,10 @@
 # Vending Machine app
 
-## Install python
+## Install python >= 3.8x
 
 https://www.python.org/downloads/
+
+We are not going to use virtual environment since we do not use any external packages.
 
 ## Clone the project from GitHub
 
@@ -13,7 +15,8 @@ git clone https://github.com/pfbox/vendingmachine.git
 ## Run app
 
 ```
-python main.py
+cd vendingmaching
+python3 main.py
 ```
 
 ## Available commands
