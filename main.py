@@ -112,8 +112,12 @@ class VendingMachine:
                 else:
                     print('Wrong input')
             elif len(cmd) == 2:
-                if cmd[0] == 'pay' and int(cmd[1]):
-                    self.pay(int(cmd[1]))
+
+                if cmd[0] == 'pay':
+                    try:
+                        self.pay(int(cmd[1]))
+                    except ValueError:
+                        print ('Wrong input')
                 elif cmd[0] == 'item':
                     item = self.find_item(cmd[1])
                     if item:
