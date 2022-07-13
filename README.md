@@ -45,4 +45,5 @@ Refunded {200: 1, 25: 1, 5: 1}, total refund 230
  - Logging/tracking
  - One word command 
  - Admin access
- - Add sophisticated checking (e.g. if you put a bill but no merchandise nor change available) 
+ - Add sophisticated checking (e.g. if you put a bill but no merchandise nor change available)
+ - Add unit/integration tests
